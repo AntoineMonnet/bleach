@@ -10,8 +10,9 @@ Vendored libraries must follow these rules:
 1. Vendored libraries must be pure Python--no compiling.
 2. Source code for the libary is included in this directory.
 3. License must be included in this repo and in the Bleach distribution.
-4. Requirements of the library become requirements of Bleach.
-5. No modifications to the library may be made.
+4. Transitive requirements of the library become requirements of Bleach.
+5. ``pip_install_vendor.sh`` results in the same code that is vendored
+   in-tree (i.e. is reproducible in the dev environment)
 
 
 Adding/Updating a vendored library

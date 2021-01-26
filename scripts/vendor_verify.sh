@@ -16,7 +16,7 @@ mkdir "${DEST}"
 pip --version
 
 # Install vendored dependencies into temp directory
-pip install --no-binary all --no-compile --no-deps -r bleach/_vendor/vendor.txt --target "${DEST}"
+DEST="${DEST}" ./bleach/_vendor/pip_install_vendor.sh
 
 # Diff contents of temp directory and bleach/_vendor/ excluding vendoring
 # infrastructure
@@ -28,6 +28,7 @@ diff -r \
     --exclude="pip_install_vendor.sh" \
     --exclude="__pycache__" \
     --exclude="RECORD" \
+    --exclude="0001-vendor-add-patched-core.validators-from-Django-1.11..patch" \
     bleach/_vendor/ "${DEST}"
 
 # Go through all RECORD files and compare sorted versions; RECORD files are
