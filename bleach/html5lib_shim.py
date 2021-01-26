@@ -468,7 +468,7 @@ def convert_entity(value):
 
         code_point = int(int_as_string, base)
         if 0 < code_point < 0x110000:
-            return six.unichr(code_point)
+            return chr(code_point)
         else:
             return None
 
