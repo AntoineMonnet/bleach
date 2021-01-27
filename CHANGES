@@ -1,6 +1,25 @@
 Bleach changes
 ==============
 
+Version 3.4.0 (February 1st, 2021)
+----------------------------------
+
+**Security fixes**
+
+None
+
+**Features**
+
+* Python 3.9 support
+* Update clean to sanitize URIs with use Python 3.9 urlparse behavior
+  for all Python versions #536.
+
+None
+
+**Bug fixes**
+
+None
+
 Version 3.3.0 (February 1st, 2021)
 ----------------------------------
 
